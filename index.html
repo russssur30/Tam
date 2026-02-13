@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/a14ae32021.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>For Tammy!</title>
+
+    <style type="text/css">
+      @font-face {
+        font-family: digit;
+        src: url("digital-7_mono.ttf") format("truetype");
+      }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </head>
+
+  <body>
+    <div id="mainDiv">
+      <div id="content">
+        <div id="code">
+          <span class="comments">/**</span><br />
+          <span class="space" /><span class="comments">*THE CODE OF LOVE</span
+          ><br />
+          <span class="space" /><span class="comments">*/</span><br />
+          Hi Tammy !<br />
+          Do you know what my one favorite memory is?<br />
+          <span class="comments"
+            >// Of course you don't, because I didn't tell you. </span
+          ><br />
+          <span class="comments"
+            >// It was when I realized that I had a crush on you. </span
+          ><br />
+          <span class="comments"
+            >// and kept trying to tell myself that I don't.</span
+          ><br />
+          It was September when I confessed ;<br />
+          <span class="comments"
+            >// Your face. Your Voice. Your Words. How you sleep</span
+          ><br />
+          <span class="comments"
+            >// Your everything got imprinted in my heart;</span
+          ><br />
+          All little things; <br />
+
+          <span class="comments">// Random history lesson</span><br />
+          <span class="comments">// Out of topic jokes</span><br />
+          <span class="comments">// Distracting side story</span><br />
+          <span class="comments">// Random work-related anger</span><br />
+          <span class="comments">// Ofcourse the 'hilik'</span><br />
+          As time went on ;<br />
+          <span class="comments">// The bond grew stronger and stronger</span
+          ><br />
+          <span class="comments">// From Infatuation to Love</span><br />
+          There have been fights ;<br />
+          <span class="comments">// And I'm sure there will be more.</span
+          ><br />
+          <span class="comments"
+            >// But our Bond will always grow back Stronger;</span
+          ><br />
+          <br />
+          <br />
+          All I want to say is:<br />
+          If all we have is silence, I will still choose you.<br />
+          To my favorite Person, I love you!<br />
+          <br />
+          <br />
+          Now If you want to see my valentine gift you can touch the heart
+          below<br />
+          <br />
+          <span id="heartspan">
+            <a href="thankyou.html"><i class="fas fa-heart" id="icon"></i></a>
+          </span>
+        </div>
+        <div id="loveHeart">
+          <canvas id="garden"></canvas>
+          <div id="words">
+            <div id="messages"></div>
+            <div id="loveu">
+              <br />
+              <div class="signature"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var offsetX = $("#loveHeart").width() / 2;
+      var offsetY = $("#loveHeart").height() / 2 - 55;
+      var together = new Date();
+      together.setFullYear(2016, 8, 5);
+      together.setHours(16);
+      together.setMinutes(30);
+      together.setSeconds(0);
+      together.setMilliseconds(0);
+
+      if (!document.createElement("canvas").getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML =
+          "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none");
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+      } else {
+        setTimeout(function () {
+          startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+          timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+      }
+    </script>
+  </body>
+</html>
